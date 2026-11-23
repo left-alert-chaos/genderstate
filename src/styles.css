@@ -24,8 +24,24 @@
 	color: black;
 }
 
+::backdrop {
+	animation: backdrop-fade 0.5s forwards;
+	background-color: black;
+}
+
+@keyframes backdrop-fade {
+	from {
+		opacity: 0%;
+		backdrop-filter: blur(0);
+	}
+	to {
+		opacity: 40%;
+		/* backdrop-filter: blur(5px); */
+	}
+}
+
 dialog {
-	background-color: inherit;
+	background-color: #4610c3;
 	border: 2px solid black;
 	transition: all 0.5s allow-discrete;
 	opacity: 0%;
@@ -45,4 +61,34 @@ dialog:open {
 		opacity: 0%;
 		transform: translateY(100%);
 	}
+}
+
+button {
+	border: 2px solid black;
+	transition: transform 0.25s;
+	background-color: inherit;
+	font-family: inherit;
+
+	&:hover {
+		transform: translateY(-10%);
+	}
+}
+
+@keyframes flyout {
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes flyin {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+main {
+	animation: flyin 0.5s forwards;
 }

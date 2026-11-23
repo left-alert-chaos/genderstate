@@ -12,15 +12,7 @@ function transition(page) {
 	console.log("transition('" + page + "')");
 
 	document.querySelectorAll("*").forEach((element) => {
-		element.style.animation = "flyout 0.75s ease-out forwards";
+		element.style.animation = "flyout 0.5s ease-out forwards";
 	});
 	setTimeout(() => { document.location.replace(page); }, 750);
 }
-
-/*
-document.getElementById("exitButton").addEventListener("click", (_) => {
-	document.querySelectorAll("*").forEach((element) => {
-		element.style.animation = "flyout 0.75s ease-out forwards";
-	});
-});
-*/
