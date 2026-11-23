@@ -12,7 +12,7 @@
   line-height: 24px;
   font-weight: 1800;
 
-  color: #0f0f0f;
+  color: black;
   background-color: #4610c3;
 
   font-synthesis: none;
@@ -20,4 +20,28 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+	background-color: white;
+	color: black;
+}
+
+* {
+	animation: flyin 0.75s ease-out forwards;
+}
+
+@keyframes flyin {
+	from {
+		transform: translateX(75%);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes flyout {
+	to {
+		transform: translateX(-100%);
+	}
 }
