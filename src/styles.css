@@ -3,9 +3,6 @@
 	src: url(assets/Cairopixel.ttf);
 }
 
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #ffe21c);
-}
 :root {
   font-family: Cairopixel;
   font-size: 36px;
@@ -27,21 +24,25 @@
 	color: black;
 }
 
-* {
-	animation: flyin 0.75s ease-out forwards;
+dialog {
+	background-color: inherit;
+	border: 2px solid black;
+	transition: all 0.5s allow-discrete;
+	opacity: 0%;
+	transform: translateY(100%);
+
+	@starting-style {
+		opacity: 100%;
+		transform: translateY(100%);
+	}
 }
 
-@keyframes flyin {
-	from {
-		transform: translateX(75%);
-	}
-	to {
-		transform: translateX(0px);
-	}
-}
+dialog:open {
+	opacity: 100%;
+	transform: translateY(0px);
 
-@keyframes flyout {
-	to {
-		transform: translateX(-100%);
+	@starting-style {
+		opacity: 0%;
+		transform: translateY(100%);
 	}
 }

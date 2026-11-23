@@ -14,7 +14,14 @@
 				<h2>hi</h2>
 			</div>
 			<button onclick="transition('test.html')">exit</button>
+			<button command="show-modal" commandfor="log">Log your gender</button>
 		</main>
+
+		<dialog id="log">
+			<h2>Log your gender</h2>
+			<button command="close" commandfor="log">Cancel</button>
+		</dialog>
+
 		<script src="main.js"></script>
 	</body>
 </html>
