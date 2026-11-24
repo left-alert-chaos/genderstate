@@ -11,8 +11,11 @@ async function greet() {
 function transition(page) {
 	console.log("transition('" + page + "')");
 
-	document.querySelectorAll("*").forEach((element) => {
+	/*
+	document.querySelector("main").forEach((element) => {
 		element.style.animation = "flyout 0.5s ease-out forwards";
 	});
-	setTimeout(() => { document.location.replace(page); }, 750);
+	*/
+	document.querySelector("main").style.animation = "flyout 0.5s ease-out forwards";
+	setTimeout(() => { document.location.replace(page); }, 500);
 }

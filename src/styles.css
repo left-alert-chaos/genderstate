@@ -1,22 +1,24 @@
+
 @font-face {
 	font-family: Cairopixel;
 	src: url(assets/Cairopixel.ttf);
 }
 
 :root {
-  font-family: Cairopixel;
-  font-size: 36px;
-  line-height: 24px;
-  font-weight: 1800;
+	--cobalt: #4610c3;
+	font-family: Cairopixel;
+	font-size: 36px;
+	line-height: 24px;
+	font-weight: 1800;
 
-  color: black;
-  background-color: #4610c3;
+	color: black;
+	background-color: var(--cobalt);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 }
 
 ::selection {
@@ -41,7 +43,7 @@
 }
 
 dialog {
-	background-color: #4610c3;
+	background-color: var(--cobalt);
 	border: 2px solid black;
 	transition: all 0.5s allow-discrete;
 	opacity: 0%;
@@ -75,6 +77,9 @@ button {
 }
 
 @keyframes flyout {
+	from {
+		transform: translateX(0px);
+	}
 	to {
 		transform: translateX(-100%);
 	}
